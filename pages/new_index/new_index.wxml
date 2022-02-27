@@ -21,6 +21,10 @@
 <view class="er2code iconfont icon-erweima" id="{{userId}}" bindtap="creat_qr_code">体检二维码</view>
 </view>
 </view>
+<view class="mid-view">
+<view class=" mid-view-icon-image right-view-icon-image"><image src="../../static/img/jl.png"></image></view>
+<view class="mid-view-icon-text right-view-icon-text">体检记录</view>
+</view>
 <view class="right-view">
 <view class="right-view-icon-image"><image src="../../static/img/yuyue.png"></image></view>
 <view class="right-view-icon-text">预约就诊</view>
