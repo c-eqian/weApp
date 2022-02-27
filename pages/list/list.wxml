@@ -1,0 +1,18 @@
+<!--pages/list/list.wxml-->
+<!--
+<view   wx:if="{{list.length>0}}">
+  <i-cell-group wx:for="{{list}}" bindtap="getItem" data-item="{{item}}" i-class="list-class">
+    <i-cell title="{{item.VisitingDate}}" is-link value="{{item.ProjectName}}"></i-cell>
+</i-cell-group>
+</view>
+<van-empty wx:else image="error" description="{{msg}}" />
+-->
+
+<view   wx:if="{{list.length>0}}" class="item-main">
+<view class="item"  wx:for="{{list}}" bindtap="getItem" data-item="{{item}}">
+  <i-cell-group i-class="listItem-class">
+    <i-cell title="{{item.VisitingDate}}" is-link value="{{item.ProjectName}}"></i-cell>
+</i-cell-group>
+</view>
+</view>
+<van-empty wx:else image="error" description="{{msg}}" />

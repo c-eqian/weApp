@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-collapse": "../../utils/plugin/dist/collapse/index",
+    "i-collapse-item": "../../utils/plugin/dist/collapse-item/index",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

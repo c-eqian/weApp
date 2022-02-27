@@ -1,0 +1,86 @@
+<view class="caption-wrap" wx:if="{{physicalData.length>0}}">
+  <view wx:if="{{type==0}}">
+    <view wx:for="{{physicalData}}">
+      <text class="caption-title">健康体检</text>
+      <i-collapse name="{{name}}">
+        <!--基本-->
+        <i-collapse-item title="{{FeeItemName}}" name="{{item.name}}">
+          <view slot="content" class="content">
+            <view class="content-item">
+              <!--身高-->
+              <view class="font font-2">身高</view>
+              <view class="font fontCorlor">{{item.Height?item.Height:''}}
+                <text class="font font-unint">{{item.Height?"cm":''}}</text>
+              </view>
+              <view class="font-d">{{item.ReviewDate?item.ReviewDate:''}}</view>
+            </view>
+            <!--体重-->
+            <view class="content-item">
+              <view class="font font-2">体重</view>
+              <view class="font fontCorlor">{{item.Weight?item.Weight:''}}
+                <text class="font font-unint">{{item.Weight?'kg':''}}</text>
+              </view>
+              <view class="font-d">{{item.ReviewDate?item.ReviewDate:''}}</view>
+            </view>
+            <!--心率-->
+            <view class="content-item">
+              <view class="font font-3">左心率</view>
+              <view class="font fontCorlor">{{item.LDBP?item.LDBP:''}}
+                <text class="font font-unint">{{item.LSBP?item.LSBP:''}}</text>
+              </view>
+              <view class="font-d">{{item.ReviewDate?item.ReviewDate:''}}</view>
+            </view>
+            <view class="content-item">
+              <view class="font font-3">右心率</view>
+              <view class="font fontCorlor">{{item.RDBP?item.RDBP:''}}
+                <text class="font font-unint">{{item.RSBP?item.RSBP:''}}</text>
+              </view>
+              <view class="font-d">{{item.ReviewDate?item.ReviewDate:''}}</view>
+            </view>
+            <!--BMI-->
+            <view class="content-item">
+              <view class="font font-3">BMI</view>
+              <view class="font fontCorlor">{{item.BMI?item.BMI:''}}
+                <text class="font font-unint"></text>
+              </view>
+              <view class="font-d">{{item.ReviewDate?item.ReviewDate:''}}</view>
+            </view>
+          </view>
+        </i-collapse-item>
+      </i-collapse>
+    </view>
+
+  </view>
+  <!--尿检-->
+  <view wx:elif="{{type==1}}">
+    <text class="caption-title">健康体检</text>
+    <i-collapse name="{{name}}">
+      <i-collapse-item title="{{FeeItemName}}" name="{{item.name}}">
+        <view slot="content" class="content" wx:for="{{physicalData}}">
+          <view class="content-item content-one" wx:if="{{index%2==0}}">
+            <view class="font font-2">{{item.ItemName?item.ItemName:''}}</view>
+            <view class="font fontCorlor">{{item.Lis_Result?item.Lis_Result:''}}
+              <text class="font font-unint">{{item.Lis_ResultUnit?Lis_ResultUnit:''}}</text>
+            </view>
+            <view class="font font-d">{{item.Lis_RangeLowValue?item.Lis_RangeLowValue:''}}-{{item.Lis_RangeHighValue?item.Lis_RangeHighValue:''}}
+            </view>
+          </view>
+          <view class="content-item content-two" wx:else>
+            <view class="font font-2">{{item.ItemName?item.ItemName:''}}</view>
+            <view class="font fontCorlor">{{item.Lis_Result?item.Lis_Result:''}}
+              <text class="font font-unint">{{item.Lis_ResultUnit?item.Lis_ResultUnit:''}}</text>
+            </view>
+            <view class="font font-d">{{item.Lis_RangeLowValue?item.Lis_RangeLowValue:''}}-{{item.Lis_RangeHighValue?item.Lis_RangeHighValue:''}}
+            </view>
+          </view>
+
+        </view>
+
+      </i-collapse-item>
+    </i-collapse>
+
+
+    <!--header结束-->
+  </view>
+</view>
+<van-empty description="暂无数据" wx:else />

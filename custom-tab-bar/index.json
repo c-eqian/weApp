@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "i-tab-bar": "../utils/plugin/dist/tab-bar/index",
+    "i-tab-bar-item": "../utils/plugin/dist/tab-bar-item/index"
+  }
+
+}

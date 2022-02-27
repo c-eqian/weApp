@@ -1,0 +1,138 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/login/login"
+            ]
+          }
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/query/query"
+            ]
+          }
+        },
+        {
+          "name": "pages/query/query",
+          "pathName": "pages/query/query",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/query/query"
+            ]
+          }
+        },
+        {
+          "name": "pages/person/person",
+          "pathName": "pages/person/person",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/person/person"
+            ]
+          }
+        },
+        {
+          "name": "pages/register/register",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/register/register"
+            ]
+          }
+        },
+        {
+          "name": "pages/Physicaldetails/Physicaldetails",
+          "pathName": "pages/Physicaldetails/Physicaldetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/listItem/listItem",
+          "pathName": "pages/listItem/listItem",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/listItem/listItem"
+            ]
+          }
+        },
+        {
+          "name": "pages/notice/notice",
+          "pathName": "pages/notice/notice",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/notice/notice"
+            ]
+          }
+        },
+        {
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "query": "res=%5B%7B%22Height%22%3A175%2C%22Weight%22%3A60%2C%22BMI%22%3A20%2C%22RequisitionId%22%3A%2221101700003%22%2C%22LSBP%22%3A68%2C%22LDBP%22%3A78%2C%22RSBP%22%3A68%2C%22RDBP%22%3A78%2C%22ProjectName%22%3A%22%E5%81%A5%E5%BA%B7%E4%BD%93%E6%A3%80%22%2C%22Status%22%3Anull%2C%22ReviewDoctor%22%3Anull%2C%22ReviewDate%22%3A%222021-12-17%2018%3A16%3A52%22%7D%5D&type=0",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/details/details"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

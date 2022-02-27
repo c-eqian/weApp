@@ -1,0 +1,4 @@
+/* pages/listItem/listItem.wxss */
+.listItem-class{
+  border-bottom: 1rpx solid silver;
+}

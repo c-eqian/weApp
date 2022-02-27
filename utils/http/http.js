@@ -1,0 +1,14 @@
+module.exports={
+	//开发环境的url
+	dev:{
+		baseUrl:"http://120.77.44.219:13209"
+	},
+	//测试环境url
+	test:{
+		baseUrl:"http://127.0.0.1:13209/api/v2"
+	},
+	//线上环境url
+	prod:{
+		baseUrl:'https://api.it120.cc'
+	}
+}

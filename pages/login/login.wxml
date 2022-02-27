@@ -1,0 +1,21 @@
+<view id="login-main">
+<view class="avatar-view"><image src="../../static/img/avatar.jpg" class="avatar">
+</image></view>
+<view class="nick">
+  <label class="nickname">十三</label>
+</view>
+<form bindsubmit="login">
+<view id="user-account">
+<i class="user-icon iconfont icon-yonghuming1"></i><input type="text" name="username" id="login-name" placeholder="输入您的账号" value="{{account}}" bindinput="listenName"></input>
+</view>
+<view id="user-password">
+<i class="user-icon iconfont icon-mima" ></i><input type="password" name="password" id="login-password" placeholder="输入您的密码" value="{{password}}"></input>
+</view>
+<view class="other-btn">
+<button bindtap="registerAccount" id="register-btn"> 没有账号？<text>去注册</text></button>
+<button bindtap="forgetPassword" id="forget-btn"><text>忘记密码?</text></button>
+</view>
+<button id="login-btn" form-type="submit"><text>登陆</text></button>
+</form>
+
+</view>

@@ -1,0 +1,193 @@
+#login-main{
+  width:100%;
+  height:1300rpx;
+  background-color: rgb(245,245,245);
+}
+.avatar-view{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.avatar-view .avatar{
+  margin-top: 100rpx;
+  display: flex;
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+}
+.nick{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.nick .nickname{
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 300;
+}
+#user-account{
+  width:100%;
+  height:100rpx;
+  background-color: white;
+  position: relative;
+  top:100rpx;
+  border-radius: 50rpx;
+}
+#user-password{
+  width:100%;
+  height:100rpx;
+  background-color: white;
+  position: relative;
+  top:130rpx;
+  border-radius: 50rpx;
+}
+#user-account .user-icon{
+position: relative;
+left:40rpx;
+top:30rpx;
+color: rgb(143, 143, 143);
+}
+#login-name{
+  text-align: center;
+  width:400rpx;
+  margin-left: 200rpx;
+  position: relative;
+  bottom: 10rpx;
+}
+#user-password .user-icon{
+position: relative;
+left:40rpx;
+top:30rpx;
+color: rgb(143, 143, 143);
+}
+#login-password{
+  text-align: center;
+  width:400rpx;
+  margin-left: 200rpx;
+  position: relative;
+  bottom: 10rpx;
+}
+#pass2{
+  width:400rpx;
+  height:80rpx;
+  margin-left: 320rpx;
+  position: relative;
+  bottom: 25rpx;
+}
+.other-btn{
+  margin-top: 150rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.other-btn #register-btn,#forget-btn{
+  height: 80rpx;
+}
+.other-btn #register-btn::after{
+    border: none;
+  }
+  .other-btn #forget-btn::after{
+    border: none;
+
+  }
+  .other-btn #register-btn text{
+    color: blueviolet;
+  }
+  .other-btn #forget-btn{
+    color: blueviolet;
+  }
+#login-btn{
+  position: relative;
+  top:50rpx;
+  background-color:rgb(51, 204, 170);
+  width:600rpx;
+  border-radius: 50rpx;
+}
+#login-btn text{
+  color:white;
+  font-size: 39rpx;
+}
+
+
+
+ /*
+ *阿里巴巴图标
+ */
+ @font-face {
+  font-family: "iconfont"; /* Project id 2960494 */
+  src: url('//at.alicdn.com/t/font_2960494_20cdd3xrrhe.woff2?t=1638348568788') format('woff2'),
+       url('//at.alicdn.com/t/font_2960494_20cdd3xrrhe.woff?t=1638348568788') format('woff'),
+       url('//at.alicdn.com/t/font_2960494_20cdd3xrrhe.ttf?t=1638348568788') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fanhui:before {
+  content: "\e600";
+}
+
+.icon-mima:before {
+  content: "\e601";
+}
+
+.icon-mima1:before {
+  content: "\e620";
+}
+
+.icon-erweima:before {
+  content: "\e65f";
+}
+
+.icon-zhucedenglu:before {
+  content: "\e734";
+}
+
+.icon-zuixiaohua:before {
+  content: "\e669";
+}
+
+.icon-shezhi:before {
+  content: "\e70f";
+}
+
+.icon-guanbi:before {
+  content: "\eb6a";
+}
+
+.icon-zhuce:before {
+  content: "\e6d6";
+}
+
+.icon-quanpingzuidahua:before {
+  content: "\e70e";
+}
+
+.icon-zhuce1:before {
+  content: "\e71c";
+}
+
+.icon-yonghuming:before {
+  content: "\e607";
+}
+
+.icon-yonghuming1:before {
+  content: "\e612";
+}
+
+.icon-mima2:before {
+  content: "\e8b2";
+}
+
+.icon-zhanghao:before {
+  content: "\e632";
+}
+
+.icon-yonghuming2:before {
+  content: "\e60a";
+}

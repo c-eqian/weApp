@@ -1,0 +1,106 @@
+<!--pages/person/person.wxml-->
+
+<view class="person-main">
+  <van-empty description="请先登录" wx:if="{{!isLogin}}">
+    <van-button round type="danger" class="bottom-button" bindtap="loginFuc">登录</van-button>
+  </van-empty>
+  <view class="person-content" wx:else>
+    <view class="person-info">
+    <image class="avatar" wx:if="{{!avatarUrl}}" src="../../static/img/defaut-avatar.jpg"></image>
+      <image wx:else src="{{avatarUrl}}" class="avatar">
+      </image>
+      <view class="self-info">
+        <view class="person-name">
+          <label class="iconfont icon-xingming1">姓名：</label>
+          <label>{{loginName}}</label>
+        </view>
+        <view class="person-sex">
+          <label class="iconfont icon-xingbie3">性别：</label>
+          <label>{{sex}}</label>
+        </view>
+        <view class="person-age">
+          <label class="iconfont icon-ziyuan48">年龄：</label>
+          <label>{{age}}</label>
+        </view>
+        <view class="person-org">
+          <label class="iconfont icon-yiliaojigou">机构：</label>
+          <label>{{org}}</label>
+        </view>
+      </view>
+
+    </view>
+    <view class="login-user">
+      <label class="user-name">{{username}}</label>
+      <label class="empty">
+        <label class="editData iconfont icon-bianji" bindtap="editData">编辑资料</label>
+      </label>
+    </view>
+    <view class="person-function">
+      <view class="function-card">
+        <view class="function-1">
+          <view class="physical" bindtap="heightFuc">
+            <image src="../../static/fuc/height.png" class="physical-img">
+            </image>
+            <label>身高</label>
+          </view>
+          <view class="physical" bindtap="weightFuc">
+            <image src="../../static/fuc/weight-2.png" class="physical-img">
+            </image>
+            <label>体重</label>
+          </view>
+          <view class="physical" bindtap="temptFuc">
+            <image src="../../static/fuc/temp.png" class="physical-img">
+            </image>
+            <label>体温</label>
+          </view>
+        </view>
+        <view class="function-2">
+          <view class="physical" bindtap="urineFuc">
+            <image src="../../static/fuc/nj.png" class="physical-img">
+            </image>
+            <label>尿检</label>
+          </view>
+          <view class="physical" bindtap="EcgFuc">
+            <image src="../../static/fuc/ECG.png" class="physical-img">
+            </image>
+            <label>心电</label>
+          </view>
+          <view class="physical" bindtap="passFuc">
+            <image src="../../static/fuc/pass.png" class="physical-img">
+            </image>
+            <label>超声</label>
+          </view>
+        </view>
+
+        <view class="function-3">
+          <view class="physical">
+            <image src="../../static/fuc/not.png" class="physical-img">
+            </image>
+            <label>待定</label>
+          </view>
+          <view class="physical">
+            <image src="../../static/fuc/not.png" class="physical-img">
+            </image>
+            <label>待定</label>
+          </view>
+          <view class="physical" bindtap="allFuc">
+            <image src="../../static/fuc/all-2.png" class="physical-img">
+            </image>
+            <label>全部</label>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="iconfont {{moreIcon}} more" bindtap="alertMenu">更多</view>
+  <van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+  bind:cancel="onClose"
+  cancel-text="取消"
+/>
+  </view>
+<van-dialog id="van-dialog" />
+</view>

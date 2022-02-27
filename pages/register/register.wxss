@@ -1,0 +1,86 @@
+/* pages/register/register.wxss */
+/*page{
+  background-image:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn20120%2F600%2Fw1080h1920%2F20190416%2F91a6-hvsckth7518198.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641453178&t=4d83d44a3bde96f671e5987ff281ea81);
+  background-size: 100% 100%;
+  overflow:hidden; 
+  position:fixed;
+  margin: 0rpx; 
+  padding: 0rpx;
+  opacity: 0.6; 
+}*/
+.item {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1px solid gainsboro;
+}
+
+.tip {
+  font-size: 0.5rem;
+  color: red;
+}
+
+.tip2 {
+  font-size: 0.8rem;
+  color: black;
+}
+
+.register-btn{
+  color: white;
+  background: #0271c1;
+  font-size: 0.9rem;
+  width: 90%;
+  margin-top: 60rpx;
+}
+
+.input {
+  margin-left: 40rpx;
+  text-align: center;
+}
+/*.byte2{
+  letter-spacing:25px;
+}*/
+
+.input2 {
+  width: 50%;
+
+}
+.input-tip{
+  padding-top: 10rpx;
+  text-align: center;
+  font-size: 0.8rem;
+  color: red;
+}
+.plac {
+  color: #aab2bd;
+  font-size: 0.8rem;
+  /* placeholder位置  *//* text-align: right; */
+}
+
+/* 验证吗 */
+.code {
+  width: 160rpx;
+  border: 1px solid #0271c1;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10rpx;
+  position: absolute;
+  right: 15rpx;
+}
+/*底部按钮*/
+.botton-btn{
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.toForget-pass,.toLogin{
+  font-size: 0.9rem;
+}
+.toForget-pass{
+  color: blueviolet;
+}
+.toLogin{
+  color: #FF9A00;
+}

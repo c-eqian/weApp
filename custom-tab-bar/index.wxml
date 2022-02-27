@@ -1,0 +1,6 @@
+
+<i-tab-bar current="{{ current }}" bindchange="handleClickItem" style="margin-top: 300rpx;">
+    <i-tab-bar-item key="0" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="1" icon="message" current-icon="message_fill" dot title="消息"></i-tab-bar-item>
+    <i-tab-bar-item key="2" icon="mine" current-icon="mine_fill"  title="我的"></i-tab-bar-item>
+</i-tab-bar>
