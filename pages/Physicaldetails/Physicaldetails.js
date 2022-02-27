@@ -22,7 +22,6 @@ Page({
       type:options.type,
       FeeItemName:options.FeeItemName
     })
-    console.log(this.data.physicalData)
   },
 
   /**

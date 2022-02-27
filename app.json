@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/login/login",
     "pages/person/person",
     "pages/register/register",
@@ -9,7 +8,9 @@
     "pages/listItem/listItem",
     "pages/list/list",
     "pages/notice/notice",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/new_index/new_index",
+    "pages/qrcode/qrcode"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -17,7 +18,7 @@
     "navigationBarTitleText": "十三",
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": true
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
@@ -27,21 +28,15 @@
     "backgroundColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "selectedIconPath": "/static/barIcon/index-activated.png",
-        "iconPath": "/static/barIcon/index.png",
+        "pagePath": "pages/new_index/new_index",
         "text": "首页"
       },
       {
         "pagePath": "pages/notice/notice",
-        "selectedIconPath": "/static/barIcon/index-activated.png",
-        "iconPath": "/static/barIcon/index.png",
         "text": "消息"
       },
       {
         "pagePath": "pages/person/person",
-        "selectedIconPath": "/static/barIcon/index-activated.png",
-        "iconPath": "/static/barIcon/index.png",
         "text": "我的"
       }
     ]

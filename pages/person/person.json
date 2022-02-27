@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "table-view": "../../miniprogram_npm/miniprogram-table-component",
     "van-button": "/miniprogram_npm/@vant/weapp/button/index",
     "van-empty": "@vant/weapp/empty/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index",

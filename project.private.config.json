@@ -131,6 +131,18 @@
               "pages/details/details"
             ]
           }
+        },
+        {
+          "name": "pages/new_index/new_index",
+          "pathName": "pages/new_index/new_index",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/new_index/new_index"
+            ]
+          }
         }
       ]
     }

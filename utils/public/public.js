@@ -20,9 +20,11 @@ export function genderHandle(gender){
   var res = ''
   switch(gender){
     case '1':
+      case 1:
       res = '男';
       break;
     case '2':
+      case 2:
       res = '女';
       break;
     default:

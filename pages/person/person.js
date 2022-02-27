@@ -46,7 +46,6 @@ Page({
       {
         userId:this.data.userId
       }).then(res=>{
-        console.log(res)
       })
 
   },
@@ -62,10 +61,8 @@ Page({
           {
             avatarUrl:result.userInfo.avatarUrl
           })
-        console.log(result)
       },
       fail: (res) => {
-        console.log(res)
 
       },
     })
@@ -78,10 +75,8 @@ Page({
     lang: "zh_CN",
      withCredentials: true,
      success: (result) => {
-       console.log(result)
      },
      fail: (res) => {
-      console.log(res)
      },
    })
   },
@@ -133,7 +128,6 @@ passFuc:function(){
     wx.navigateTo({
       url: `/pages/list/list?res=${JSON.stringify(res)}`,
     })
-    console.log(res)
   })
 
 
@@ -171,7 +165,6 @@ passFuc:function(){
     wx.removeStorage({
       key: key,
       success (res) {
-        console.log(res)
       }
     })
   },
@@ -266,7 +259,6 @@ wx.navigateTo({
         })
       },
       fail(res){
-        console.log(res)
        self.setData({
          isLogin:false
        })
