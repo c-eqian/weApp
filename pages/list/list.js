@@ -1,6 +1,6 @@
 // pages/list/list.js
 import {get, post} from "../../utils/http/api";
-import{messageTip} from "../../utils/public/public";
+import{messageTip,getUserId} from "../../utils/public/public";
 Page({
 
   /**
@@ -9,7 +9,40 @@ Page({
   data: {
     msg:"暂无数据",
     PID:"",
-    list:[]
+    list:[],
+    page:1,
+    limit:30
+  },
+  //体检记录列表
+  allList(){
+    /**
+   * 全部
+   */
+  var that = this;
+  var userId = getUserId();
+  if (userId!=0||!userId){
+    get(
+      "/physicalList",
+      {
+        userId:userId,
+       page:that.data.page||1,
+       limit:that.data.limit||30
+      }
+    ).then(res=>{
+    if(res.status==200){
+      this.setData({
+        list:res.result
+      })
+    }else{
+      this.setData({
+        msg:res.msg
+      })
+    }
+    })
+  }else{
+    messageTip("登录过期，请重新登录!")
+  }
+  
   },
 /**
  * 自定义
@@ -41,20 +74,7 @@ getItem:function(e){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    /**
-     * 查询体检记录
-     */
-    var res = JSON.parse(options.res)
-    if(res.status==200){
-      this.setData({
-        list:res.result
-      })
-    }else{
-      this.setData({
-        msg:res.msg
-      })
-    }
-
+      
   },
 
   /**
@@ -68,7 +88,7 @@ getItem:function(e){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+  this.allList() 
   },
 
   /**

@@ -23,7 +23,7 @@
 </view>
 <view class="mid-view">
 <view class=" mid-view-icon-image right-view-icon-image"><image src="../../static/img/jl.png"></image></view>
-<view class="mid-view-icon-text right-view-icon-text">体检记录</view>
+<view class="mid-view-icon-text right-view-icon-text" bindtap="getPhysicalList">体检记录</view>
 </view>
 <view class="right-view">
 <view class="right-view-icon-image"><image src="../../static/img/yuyue.png"></image></view>

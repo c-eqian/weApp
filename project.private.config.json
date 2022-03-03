@@ -143,6 +143,18 @@
               "pages/new_index/new_index"
             ]
           }
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "res=undefined",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/list/list"
+            ]
+          }
         }
       ]
     }

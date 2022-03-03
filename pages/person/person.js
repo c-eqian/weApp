@@ -114,23 +114,9 @@ passFuc:function(){
    * 全部
    */
  allFuc:function(){
-  var that = this;
-  var page = 1;
-  var limit = 20;
-  get(
-    "/physicalList",
-    {
-      userId:this.data.userId,
-     page:page,
-     limit:limit
-    }
-  ).then(res=>{
-    wx.navigateTo({
-      url: `/pages/list/list?res=${JSON.stringify(res)}`,
-    })
+  wx.navigateTo({
+    url: `/pages/list/list?res`,
   })
-
-
   },
   /**
    * 编辑资料

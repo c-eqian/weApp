@@ -2,6 +2,7 @@
 import {post,get} from "../../utils/http/api.js"
 import {SM4DeCrypto,SM4EnCrypto} from "../../utils/crypto/crypto"
 import {SM4EnCrypto_ECB,SM4DeCrypto_ECB} from "../../utils/crypto/sm4"
+const app  =getApp()
 Page({
   /**
    * 页面的初始数据
@@ -42,6 +43,7 @@ if(e.detail.value.username&&e.detail.value.password){
      * 
      */
     if(res.status==200){ //登录验证成功
+      app.globalData.isLogin = true
       wx.setStorage({ //缓存数据
         key:"userInfo",
         data:JSON.stringify(res.result),
