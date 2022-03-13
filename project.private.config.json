@@ -155,6 +155,30 @@
               "pages/list/list"
             ]
           }
+        },
+        {
+          "name": "pages/appointment/appointment",
+          "pathName": "pages/appointment/appointment",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/appointment/appointment"
+            ]
+          }
+        },
+        {
+          "name": "pages/apply-physical/apply-physical",
+          "pathName": "pages/apply-physical/apply-physical",
+          "query": "",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "pages/apply-physical/apply-physical"
+            ]
+          }
         }
       ]
     }

@@ -1,0 +1,28 @@
+<view class="self-checkbox-group">
+  <van-checkbox-group value="{{ result }}" bind:change="onChange">
+  <van-cell-group>
+    <van-cell
+      wx:for="{{ list }}"
+      wx:key="index"
+      title="{{ item.FeeItemName}}"
+      value-class="value-class"
+      clickable
+      data-index="{{ index }}"
+      bind:click="toggle"
+    >
+      <van-checkbox
+        catch:tap="noop"
+        class="checkboxes-{{ index }}"
+        name="{{ item.FeeItemCode }}"
+      />
+    </van-cell>
+  </van-cell-group>
+</van-checkbox-group>
+</view>
+<!--
+  <view class="checkBox-btn">
+  <van-button icon="checked" type="info">全选</van-button>
+  <van-button icon="clear" type="warning">取消</van-button>
+</view>
+-->
+<van-button round  type="primary" bind:click="submit" size="normal" custom-class="submit-btn">提交</van-button>

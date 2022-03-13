@@ -10,7 +10,9 @@
     "pages/notice/notice",
     "pages/details/details",
     "pages/new_index/new_index",
-    "pages/qrcode/qrcode"
+    "pages/qrcode/qrcode",
+    "pages/appointment/appointment",
+    "pages/apply-physical/apply-physical"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

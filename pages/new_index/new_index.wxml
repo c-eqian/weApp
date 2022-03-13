@@ -27,7 +27,7 @@
 </view>
 <view class="right-view">
 <view class="right-view-icon-image"><image src="../../static/img/yuyue.png"></image></view>
-<view class="right-view-icon-text">预约就诊</view>
+<view class="right-view-icon-text" bindtap="apply_btn">预约就诊</view>
 </view>
 </view>
 </view>

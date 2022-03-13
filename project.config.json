@@ -47,7 +47,7 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.21.1",
+  "libVersion": "2.22.1",
   "appid": "wx2d351591bec9af4f",
   "projectname": "app",
   "cloudfunctionTemplateRoot": "",

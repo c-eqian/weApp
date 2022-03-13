@@ -1,0 +1,8 @@
+<van-calendar show="{{ show }}" show-confirm="{{ false }}" color="#07c160" />
+
+ <view class="weui-cell">
+     <view class="weui-cell__hd">类型：</view>
+     <view class="weui-cell__bd">
+      <my-dropdown prop-array='{{selectArray}}'  bind:select='select' />
+</view>
+ </view>
