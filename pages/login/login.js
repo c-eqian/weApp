@@ -48,12 +48,12 @@ if(e.detail.value.username&&e.detail.value.password){
         key:"userInfo",
         data:JSON.stringify(res.result),
       })
-      wx.navigateBack({
+      /*wx.navigateBack({
         delta: 1,
-      })
-     /* wx.switchTab({
-        url: '/pages/person/person',
       })*/
+      wx.switchTab({
+        url: '/pages/person/person',
+      })
     }
     else{
       this.messageTip(res.msg)

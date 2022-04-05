@@ -1,7 +1,8 @@
 module.exports={
 	//开发环境的url
 	dev:{
-		baseUrl:"http://120.77.44.219:13209"
+		//baseUrl:"http://120.77.44.219:13209"
+		baseUrl:"https://django-82zo-1586671-1308572844.ap-shanghai.run.tcloudbase.com/api/v2"
 	},
 	//测试环境url
 	test:{
