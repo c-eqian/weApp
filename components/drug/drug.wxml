@@ -1,0 +1,9 @@
+<!--components/drug/drug.wxml-->
+<view class="body">
+  <view class="top">{{title}}</view>
+  <view class="b"></view>
+  <view class="bottom"></view>
+  <view class="nav">
+    <slot></slot>
+  </view>
+</view>

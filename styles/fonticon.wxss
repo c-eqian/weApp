@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3063849 */
+  src: url('//at.alicdn.com/t/font_3063849_mhao63cq31.woff2?t=1646796280086') format('woff2'),
+       url('//at.alicdn.com/t/font_3063849_mhao63cq31.woff?t=1646796280086') format('woff'),
+       url('//at.alicdn.com/t/font_3063849_mhao63cq31.ttf?t=1646796280086') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icondown:before {
+  content: "\e69e";
+  color: rgb(252, 174, 6);
+  font-size: 40rpx;
+}
+
+.icon-iconup:before {
+  content: "\e69f";
+  color: rgb(211, 57, 30);
+  font-size: 40rpx;
+}
+
+.icon-chiping:before {
+  content: "\e660";
+  margin-right: 15rpx;
+  color: rgb(84, 224, 28);
+  font-size: 40rpx;
+}
+.icon-cexinshuai:before {
+  content: "\e619";
+  font-size: 60rpx;
+}
+
+.icon-shousuoya:before {
+  content: "\e642";
+  font-size: 50rpx;
+}
+
+.icon-shuzhangya:before {
+  content: "\e643";
+  font-size: 50rpx;
+}
+
+.icon-xinzang:before {
+  content: "\e7ad";
+  font-size: 140rpx;
+  color: rgb(192, 56, 15);
+  font-weight: 0;
+}
+
+.icon-huanzhe_dongmai:before {
+  content: "\e67c";
+  font-size: 50rpx;
+}
+
+
+.icon-zilinenglipinggu:before {
+  content: "\e68b";
+  color: rgba(255, 255, 255, 0.842);
+  /* background-color: rgb(34, 211, 102); */
+    /* background-color: rgb(17, 133, 211); */
+  background-color: rgb(14, 131, 125);
+  padding: 15rpx;
+  font-size: 60rpx;
+  border-radius: 20rpx;
+}
+
+.icon-zhongyitizhibianshi:before {
+  content: "\e68f";
+  color: white;
+  /* background-color: rgb(5, 180, 113); */
+  background-color: rgb(17, 133, 211);
+  padding: 15rpx;
+  font-size: 60rpx;
+  border-radius: 20rpx;
+}
+
+.icon-a-6:before {
+  content: "\e601";
+  color: white;
+  background-color: rgb(11, 86, 136);
+  padding: 15rpx;
+  font-size: 60rpx;
+  border-radius: 20rpx;
+}
+
+.icon-yiyu:before {
+  content: "\e672";
+  color: white;
+   background-color: rgb(5, 180, 113);
+  padding: 15rpx;
+  font-size: 60rpx;
+  border-radius: 20rpx;
+}
+
+.icon-a-tianqikongqizhishu-40:before {
+  content: "\e801";
+  font-size: 20rpx;
+}
+
+.icon-tianqi:before {
+  content: "\e61a";
+  font-size: 50rpx;
+  padding-right: 15rpx;
+}
+.icon-position:before {
+  content: "\e60b";
+}
+
+.icon-ganmaozhishu:before {
+  content: "\e613";
+}
+
+.icon-xiangduishidu:before {
+  content: "\e635";
+  font-size: 45rpx;
+}
+
+.icon-qixiangtubiao-wubeijing-:before {
+  content: "\e634";
+  font-size: 60rpx;
+}
+
+.icon-suifangsuifangguanli:before {
+  content: "\ead8";
+  color: rgb(248, 131, 52);
+  font-size: 100rpx;
+  opacity: 0.4;
+}
+
+.icon-tijianbaogao:before {
+  color: rgb(6, 230, 118);
+  font-size: 80rpx;
+  opacity: 0.4;
+  content: "\e612";
+}
+
+.icon-youjiantou:after {
+  content: "\e600";
+  font-size: 24rpx;
+}
+
+.icon-dizhi:before {
+  content: "\ed91";
+}
+
+.manyidu_fp:before {
+  content: "\e767";
+  color: rgb(235, 158, 15);
+  z-index: 10;
+  background-color: white;
+}
+
+.manyidu_yz:before {
+  content: "\e767";
+  color: rgb(194, 41, 14);
+  z-index: 10;
+  background-color: white;
+}
+
+.manyiduyiban:before {
+  content: "\e782";
+  color: rgb(207, 207, 32);
+  z-index: 10;
+  background-color: white;
+}
+
+.manyiduyiban_left:before {
+  content: "\e782";
+  color: rgb(21, 197, 179);
+  z-index: 10;
+  background-color: white;
+}
+
+.manyidu1:before {
+  content: "\e79c";
+  color: rgb(7, 197, 92);
+  z-index: 10;
+  background-color: white;
+}
+
+.icon-nvshengao:before {
+  content: "\e602";
+  font-size: 160rpx;
+}
+
+.icon-nanshengao:before {
+  content: "\e606";
+  font-size: 140rpx;
+}

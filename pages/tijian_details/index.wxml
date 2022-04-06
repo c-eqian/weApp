@@ -1,0 +1,235 @@
+<!--pages/suifan_details/index.wxml-->
+<view class="body">
+  <view class="top_back"></view>
+  <view class="nav">
+
+  <!--个人随访基本信息栏-->
+  <view class="title">个人随访信息</view>
+  <PersonalInformation PersonalInformation="{{Personal_information}}"></PersonalInformation>
+
+       <!--体重栏-->
+   <view class="title">体重</view>
+  <view class="tz_nav">
+    <view class="weight_nav">
+      <view>当前体重：{{signs.weight}}KG</view>
+      <view>目标体重：{{signs.target_weight}}KG</view>
+    </view>
+    <progressbar W_H_BMI="{{signs}}" _type="weight"></progressbar>
+  </view>
+  
+
+  <!--BMI栏-->
+  <view class="title">BMI指数</view>
+  <view class="tz_nav">
+    <view class="weight_nav">
+      <view>当前BMI：{{signs.bmi}}</view>
+      <view>目标MBI：{{signs.target_bmi}}</view>
+    </view>
+    <progressbar W_H_BMI="{{signs}}" _type="BMI"></progressbar>
+  </view>
+
+  <!--身高栏-->
+  <view class="title">身高</view>
+  <view class="tz_nav">
+    <!-- <view class="weight_nav">
+      <view>当前身高：{{signs.height}}CM</view>
+    </view> -->
+    <view class="height_nav">
+      <view class="male">
+        <view wx:if="{{gender == 1}}" class="male_height">{{signs.height}}厘米</view>
+        <view class="male_icon iconfont icon-nanshengao {{H_W_Nan_Show}}"></view>
+      </view>
+      <view class="female">
+        <view wx:if="{{gender == 2}}" class="female_height">{{signs.height}}厘米</view>
+        <view class="female_icon iconfont icon-nvshengao {{H_W_Nv_Show}}"></view>
+      </view>
+    </view>
+  </view>
+
+    <!-- 体温呼吸频率 -->
+  <!-- force-use-old-canvas="true" -->
+  <view class="title">体温及呼吸频率</view>
+  <view class="glucose">
+    <view class="container">
+      <ec-canvas 
+      id="mychart-dom-them" 
+      canvas-id="mychart-bar"
+       ec="{{ ec }}"
+       force-use-old-canvas="true"
+       ></ec-canvas>
+    </view>
+    <view class="glucose_prompt">
+      体温正常范围:36.0~37.8℃
+    </view>
+    <view class="glucose_prompt_2">
+      呼吸频率正常范围:16~20次/分
+    </view>
+  </view>
+
+  <!--老年人随访满意度-->
+  <!-- force-use-old-canvas="true" -->
+  <view class="title">老年人随访满意度</view>
+  <view class="glucose">
+      <view class="glucose_title">老年人健康状态自我评估</view>
+      <scale class="scale" scale="{{scale}}"></scale>
+
+      <view class="glucose_title">老年人生活自理能力评估</view>
+      <scale class="scale" scale="{{self_care}}"></scale>
+
+      <view class="glucose_title">老年人认知功能</view>
+      <scale class="scale" scale="{{cognitive}}"></scale>
+
+      <view class="glucose_title">老年人情感状态</view>
+      <scale class="scale" scale="{{emotional}}"></scale>
+  </view>
+
+  <!-- 视力 -->
+  <view class="title">视力</view>
+  <view class="vision">
+    <view class="vision_item">
+      <view class="vision_left">
+        <view class="vision_nav">{{vision.visual_of_left_eye}}</view>
+        <view class="vision_title1">左眼视力</view>
+      </view>
+      <view class="vision_right">
+        <view class="vision_nav">{{vision.visual_of_right_eye}}</view>
+        <view class="vision_title1">右眼视力</view>
+      </view>
+    </view>
+
+    <view class="correct_vision">
+     <view class="correct_vision_title">矫正视力:</view>
+     <view class="correct_vision_nav">
+        <view class="correct_vision_nav">{{vision.corrected_visual_of_left_eye}}</view>
+        <view class="correct_vision_title1">左眼视力</view>
+     </view>
+     <view class="correct_vision_nav">
+        <view class="correct_vision_nav">{{vision.corrected_visual_of_right_eye}}</view>
+        <view class="correct_vision_title1">右眼视力</view>
+     </view>
+    </view>
+  </view>
+
+  <!-- 查体 -->
+  <view class="title">查体</view>
+  <view class="body_list">
+    <view class="body_list_title">
+      <view class="body_list_title_item">名称</view>
+      <view class="body_list_title_item">情况</view>
+    </view>
+   <view class="body_list_item">
+    <view class="body_list_nav" wx:for="{{body_list}}" wx:key="index">
+     <view class="body_list_nav_name">{{item.title}}</view>
+     <view class="body_list_nav_text">{{item.text}}</view>
+    </view>
+   </view>
+  </view>
+ 
+  <!--用药记录-->
+  <view class="title">用药记录</view>
+  <view class="drug">
+    <drug title="患者用药记录">
+      <view class="drug_title">
+        <view class="item1">药物名称</view>
+        <view class="item2">剂量(mg/次)</view>
+        <view class="item3">频率(次/日)</view>
+        <view class="item4">药物用法</view>
+      </view>
+      <view wx:for="{{drug}}" wx:key="index" class="drug_item">
+        <view class="drug_name">{{item.drug_name}}</view>
+        <view class="drug_freq">{{item.drug_freq}}</view>
+        <view class="drug_dose">{{item.drug_dose}}</view>
+        <view class="drug_usage">{{item.drug_usage}}</view>
+      </view>
+    </drug>
+  </view>
+
+  <!--心脏功能栏-->
+  <view class="title">心脏功能</view>
+  <view class="heart">
+   <heart signs="{{signs}}"></heart>
+  </view>
+
+  <!--肝功能栏-->
+  <view class="title">肝功能</view>
+  <compare Liver_data = "{{Liver}}"></compare>
+
+   <!--肾功能栏-->
+   <view class="title">肾功能</view>
+   <compare Liver_data = "{{renal}}"></compare>
+
+   <!--血脂-->
+   <view class="title">血脂</view>
+  <compare Liver_data = "{{Blood_fat}}"></compare>
+
+   <!--血常规-->
+   <view class="title">血常规</view>
+  <compare Liver_data = "{{Routine_blood}}"></compare>
+
+   <!-- 尿常规 -->
+   <!-- <view class="title">尿常规</view>
+  <compare Liver_data = "{{Routine_blood}}"></compare> -->
+ 
+  <!-- 血糖 -->
+  <!-- force-use-old-canvas="true" -->
+  <view class="title">血糖</view>
+  <view class="glucose">
+    <view class="container">
+      <ec-canvas 
+      id="mychart-dom-bar" 
+      canvas-id="mychart-bar"
+       ec="{{ ec }}"
+       force-use-old-canvas="true"
+       ></ec-canvas>
+    </view>
+    <view class="glucose_prompt">
+      正常范围:空腹3.9~6.1mmol/L
+    </view>
+  </view>
+  
+  <!-- 健康指导 -->
+  <view class="title">健康指导</view>
+  <view class="Drug_situation">
+    <view class="Drug_situation_item">
+      <view class="Drug_item3">
+          <view class="Drug_item3_title">危险因素控制：</view>
+          <view class="Drug_item_nav">
+            <van-checkbox-group direction="horizontal" value="{{risk_factor_control}}">
+              <van-checkbox wx:for="{{risk_factor_control}}" wx:key="item" name="{{item}}"  
+              class="Drug_item_checkbox">{{item}}</van-checkbox>
+            </van-checkbox-group>
+          </view>
+      </view>
+    </view>
+
+    <view class="correct_vision">
+     <view class="correct_vision_nav">
+        <view class="correct_vision_nav">{{Weight_goals}}</view>
+        <view class="correct_vision_title1">减重目标（kg）</view>
+     </view>
+     <view class="correct_vision_nav">
+        <view class="correct_vision_nav">{{vaccine}}</view>
+        <view class="correct_vision_title1">建议接种疫苗</view>
+     </view>
+    </view>
+  </view>
+
+  <view class="title">健康评价</view>
+  <view class="satisfaction">
+    <view class="satisfaction_item">
+    <view>健康评价：</view>
+      <van-rate
+      value="{{ tnb_folup_type.value }}"
+      size="{{ 25 }}"
+      color="#ffd21e"
+      void-icon="star"
+      void-color="#eee"
+      bind:change="onChange"
+    />
+    <view class="satisfaction_item_last">{{tnb_folup_type.text}}</view>
+    </view>
+  </view>
+</view>
+</view>
+
+

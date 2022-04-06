@@ -1,0 +1,13 @@
+<!--components/PersonalInformation/PersonalInformation.wxml-->
+  <view class="nav">
+    <view class="item">姓名：{{PersonalInformation.name}}</view>
+    <view class="item">性别：{{PersonalInformation.gender == 1 ? "男" : "女"}}</view>
+    <view class="item">证件号：{{PersonalInformation.idcard}}</view>
+    <view class="item">手机号码：{{PersonalInformation.phone}}</view>
+    <view class="item">empi：{{PersonalInformation.empi}}</view>
+    <view class="item">随访序号：{{PersonalInformation.f_no}}</view>
+    <view class="item">医生姓名：{{PersonalInformation.doc_name}}</view>
+    <view class="item">机构名称：{{PersonalInformation.org_name}}</view>
+    <view class="item">体检日期：{{PersonalInformation.tnb_folup_date_con}}</view>
+  </view>
+

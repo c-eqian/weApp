@@ -2,6 +2,8 @@
 const { baseUrl } = require('./http.js').dev; 
 //在这里添加我们的专业域名
 const subDomain = 'xxx';
+//定义请求次数
+let ajaxTounts = 0
 
 module.exports = {
     /**
@@ -43,5 +45,28 @@ module.exports = {
 			
         });
     },
+    result:(params)=>{
+        wx.showLoading({
+          title: '加载中',
+          mask:true
+        })
+        ajaxTounts++
+        return new Promise((resolve,reject)=>{
+          wx.request({
+            ...params,
+            success: (result)=>{
+              resolve(result)
+            },
+            fail: (err)=>{
+              reject(err)
+            },
+            complete:()=>{
+              ajaxTounts--
+              if(ajaxTounts===0){
+                wx.hideLoading()
+              }
+            }
+          })
+        })
+      }
 }
-
