@@ -42,6 +42,7 @@ if(e.detail.value.username&&e.detail.value.password){
      * status：13201-密码错误；13204账号不存在；200演出成功
      * 
      */
+    console.log(res)
     if(res.status==200){ //登录验证成功
       app.globalData.isLogin = true
       wx.setStorage({ //缓存数据

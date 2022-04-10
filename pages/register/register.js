@@ -82,15 +82,14 @@ regAckPassword:function(e){
  */
 register:function(e){
   if(this.data.password==this.data.ackPassword&&this.data.password!=""&&this.data.idCard!=""){
-   post("/api/v2/register",
+   post("/register",
    {
      password:SM4EnCrypto_ECB(this.data.password),
      name:e.detail.value.name,
      idCard:this.data.idCard
    }
    ).then(res=>{
-     console.log("111")
-     console.log(res)
+     messageTip(res.msg)
    })
   }
   else{

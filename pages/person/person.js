@@ -237,7 +237,7 @@ wx.navigateTo({
           isLogin:true,
           username:data.nickName,
           loginName:data.name,
-          age:data.age,
+          age:data.birthday,
           userId:data.userId,
           org:data.org_name,
           sex:genderHandle(data.gender)

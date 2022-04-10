@@ -1,0 +1,32 @@
+<!--pages/list/list.wxml-->
+<!--
+<view   wx:if="{{list.length>0}}">
+  <i-cell-group wx:for="{{list}}" bindtap="getItem" data-item="{{item}}" i-class="list-class">
+    <i-cell title="{{item.VisitingDate}}" is-link value="{{item.ProjectName}}"></i-cell>
+</i-cell-group>
+</view>
+<van-empty wx:else image="error" description="{{msg}}" />
+-->
+
+<!-- <view   wx:if="{{list.length>0}}" class="item-main">
+<view class="item"  wx:for="{{list}}" bindtap="getItem" data-item="{{item}}">
+  <i-cell-group i-class="listItem-class">
+    <i-cell title="{{item.VisitingDate}}" is-link value="{{item.ProjectName}}"></i-cell>
+</i-cell-group>
+</view>
+</view>
+<van-empty wx:else image="error" description="{{msg}}" /> -->
+
+<!--体检记录列表界面-->
+<view class="suifanList" wx:if="{{list.length>0 }}">
+  <view wx:for="{{list}}" wx:key="folup_no" class="item" >
+      <view class="doc_name">姓名：{{item.name}}</view>
+      <view class="time"><van-tag type="{{item.status==1?'success':'primary'}}">{{item.status==0?'待体检':'已完成'}}</van-tag></view>
+      <view class="org_name iconfont icon-position">{{item.creatTime}}</view>
+      <view wx:if="{{item.status==0}}" catchtap="handitem" data-folup_no="{{item.RequisitionId}}" class="more iconfont icon-youjiantou">查看二维码</view>
+  </view>
+</view>
+
+<view class="empty" wx:else>
+  <van-empty description="暂无数据" />
+</view>
