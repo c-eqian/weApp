@@ -8,11 +8,25 @@
 <van-empty wx:else image="error" description="{{msg}}" />
 -->
 
-<view   wx:if="{{list.length>0}}" class="item-main">
+<!-- <view   wx:if="{{list.length>0}}" class="item-main">
 <view class="item"  wx:for="{{list}}" bindtap="getItem" data-item="{{item}}">
   <i-cell-group i-class="listItem-class">
     <i-cell title="{{item.VisitingDate}}" is-link value="{{item.ProjectName}}"></i-cell>
 </i-cell-group>
 </view>
 </view>
-<van-empty wx:else image="error" description="{{msg}}" />
+<van-empty wx:else image="error" description="{{msg}}" /> -->
+
+<!--体检记录列表界面-->
+<view class="suifanList">
+  <view wx:for="{{list}}" wx:key="folup_no" class="item" catchtap="handitem" data-folup_no="{{item.phy_exam_no}}">
+      <view class="doc_name">医生姓名：{{item.doc_name}}</view>
+      <view class="time">随访时间：{{item.phy_exam_date}}</view>
+      <view class="org_name iconfont icon-position">{{item.org_name}}</view>
+      <view class="more iconfont icon-youjiantou">查看详情</view>
+  </view>
+</view>
+
+<view class="empty" wx:if="{{empty===true}}">
+  <van-empty description="暂无数据" />
+</view>

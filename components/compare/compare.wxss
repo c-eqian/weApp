@@ -1,0 +1,46 @@
+/* 生活方式样式栏 */
+@import "../../styles/fonticon.wxss";
+.life_way{
+  margin: 20rpx;
+  border-radius: 15rpx;
+  background-color: white;
+  filter: drop-shadow(2px 2px 4px rgb(187, 186, 186));
+  padding-bottom: 40rpx;
+}
+
+.life_title{
+  display: flex;
+  background-color: #1bafaf;
+  padding-top: 20rpx;
+  border-radius: 15rpx;
+}
+
+.life_title_itme{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+.life_way .life_way_item{
+  display: flex;
+  color: var(--themeColoer);
+}
+
+.life_way .life_way_item .name{
+  color: rgb(49, 48, 48);
+}
+
+.life_way .life_way_item_list{
+  flex: 1;
+  color: rgb(126, 124, 122);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0 20rpx 0;
+  font-size: 24rpx;
+  border-bottom: 1px dashed rgb(202, 198, 198);
+}

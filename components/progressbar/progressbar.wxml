@@ -1,0 +1,29 @@
+<!--components/progressbar/progressbar.wxml-->
+<view class="body">
+
+  <view class="title">
+    <view class="title_item">{{ Lean_standard }}</view>
+    <view class="title_item">{{standard_chubby}}</view>
+    <view class="title_item">{{chubby_obesity}}</view>
+    <view class="title_item">{{obesity_serious}}</view>
+  </view>
+
+  <view class="nav">
+  <view class="icon iconfont {{icon}}" animation="{{animationData}}"></view>
+    <view class="left_1 item "></view>
+    <view class="left_2 item"></view>
+    <view class="center item"></view>
+    <view class="right_1 item"></view>
+    <view class="right_2 item"></view>
+  </view>
+
+  <view class="prompt">
+    <view class="prompt_item">偏瘦</view>
+    <view class="prompt_item">标准</view>
+    <view class="prompt_item">偏胖</view>
+    <view class="prompt_item">肥胖</view>
+    <view class="prompt_item">重度</view>
+  </view>
+  
+
+</view>

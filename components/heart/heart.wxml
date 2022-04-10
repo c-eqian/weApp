@@ -1,0 +1,8 @@
+<!--components/heart/heart.wxml-->
+<view class="body">
+  <view class="Heart_rate iconfont icon-cexinshuai">心率:{{signs.pulse ? signs.pulse : 56}}(分钟/次)</view>
+  <view class="Diastolic_blood iconfont icon-shuzhangya">舒张压:{{signs.diastolic_pressure}}(mmHg)</view>
+  <view class="Systolic_blood iconfont icon-shousuoya">收缩压:{{signs.systolic_pressure}}(mmHg)</view>
+  <view class="artery iconfont icon-huanzhe_dongmai">足背动脉:{{signs.pulse_foot}}</view>
+  <view class="center iconfont icon-xinzang"></view>
+</view>

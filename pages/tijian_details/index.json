@@ -1,0 +1,20 @@
+{
+  "window":{
+    "navigationBarBackgroundColor": "#3985ff"
+  },
+  "usingComponents": {
+    "PersonalInformation": "../../components/PersonalInformation/PersonalInformation",
+    "scale": "../../components/scale/scale",
+    "progressbar": "../../components/progressbar/progressbar",
+    "drug": "../../components/drug/drug",
+    "heart":"../../components/heart/heart",
+    "van-button": "@vant/weapp/button/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-circle": "@vant/weapp/circle/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "compare": "../../components/compare/compare"
+  }
+
+}

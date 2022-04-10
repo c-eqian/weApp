@@ -12,7 +12,9 @@
     "pages/new_index/new_index",
     "pages/qrcode/qrcode",
     "pages/appointment/appointment",
-    "pages/apply-physical/apply-physical"
+    "pages/apply-physical/apply-physical",
+    "pages/tijian_details/index",
+    "pages/exam_list/exam_list"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

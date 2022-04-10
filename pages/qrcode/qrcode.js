@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userId:"(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤",
+    RequisitionId:"(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤",
   },
 
   ewmChange(){
@@ -21,7 +21,7 @@ Page({
       height: size.h,
       canvasId: 'myQrcode',
       // ctx: wx.createCanvasContext('myQrcode'),
-      text: that.data.userId,
+      text: that.data.RequisitionId,
       // v1.0.0+版本支持在二维码上绘制图片
     })
   },
@@ -39,9 +39,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
     this.setData({
-      userId:options.userId?options.userId:"5201314"
+      RequisitionId:options.userId?options.RequisitionId:""
     })
     this.ewmChange()
   },

@@ -1,6 +1,13 @@
 /**app.wxss**/
 @import "/miniprogram_npm/@vant/weapp/common/index.wxss";
 
+/**定义主题颜色及字体大小**/
+page{
+  --themeColoer: #3985ff;
+  /*定义统一的字体大小*/
+  --themeFontSize: 28rpx;
+}
+
 .container {
   height: 100%;
   display: flex;

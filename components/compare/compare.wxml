@@ -1,0 +1,14 @@
+<!--components/compare/compare.wxml-->
+<view class="life_way">
+      <view class="life_title">
+        <view class="life_title_itme">项目名称</view>
+        <view class="life_title_itme">检测值</view>
+        <view class="life_title_itme">标准范围</view>
+      </view>
+
+      <view class="life_way_item" wx:for="{{_data}}" wx:key="index">
+        <view class="life_way_item_list name">{{item.title}}</view>
+        <view class="life_way_item_list iconfont {{item.iconshow}}">{{item.value}} {{item.init}}</view>
+        <view class="life_way_item_list">{{item.scope}} {{item.init}}</view>
+      </view>
+  </view>

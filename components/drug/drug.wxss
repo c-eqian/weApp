@@ -1,0 +1,48 @@
+/* components/drug/drug.wxss */
+.body {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  filter: drop-shadow(2px 2px 3px #999);
+  padding: 20rpx;
+}
+.body .b {
+  position: absolute;
+  width: calc(100% - 60px);
+  margin-left: 10px;
+  border-bottom: 4px dotted rgb(255, 252, 252);
+  margin-top: -2px;
+}
+.top {
+  background: #58a;
+  background:  radial-gradient(circle at left bottom, transparent 5px, #1bafaf 0) left bottom,
+  radial-gradient(circle at right bottom, transparent 5px, #1bafaf 0) right bottom;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40rpx);
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+}
+.bottom {
+  background: white;
+  background: radial-gradient( circle at top left, transparent 5px, #1bafaf 0) top left ,
+  radial-gradient(circle at top right, transparent 5px, #1bafaf 0) top right ;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  width: calc(100% - 40rpx);
+  height: 20px;
+  color: white;
+}
+.nav{
+    background-color: white;
+    filter: drop-shadow(2px 2px 3px #999);
+    width: calc(100% - 40rpx);
+    border-bottom-left-radius: 15rpx;
+    border-bottom-right-radius: 15rpx;
+    padding-bottom: 100rpx;
+}

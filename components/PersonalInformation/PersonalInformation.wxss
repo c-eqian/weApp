@@ -1,0 +1,10 @@
+/* components/PersonalInformation/PersonalInformation.wxss */
+.nav{
+  padding: 20rpx;
+  margin: 20rpx;
+  background-color: var(--themeColoer);
+  font-size: 30rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+  opacity: 0.8;
+}

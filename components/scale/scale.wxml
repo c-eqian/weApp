@@ -1,0 +1,10 @@
+<!--components/progressbar/progressbar.wxml-->
+<view class="body">
+
+<view class="nav">
+    <view class="item" wx:for="{{scale}}"  wx:key="text">
+      {{item.text}}
+      <view class="icon" wx:if="{{item.icon}}"></view>
+    </view>
+  </view>
+</view>

@@ -30,7 +30,7 @@ class="input input2" placeholder="请输入验证码" placeholder-class="plac" t
   <view class="item">
 <text class="tip">*</text>
 <text class="tip2 byte2">有效证件</text>
-<input class="input input2" placeholder="居民身份证号" placeholder-class="plac" maxlength="18" type="number" name="idCard" bindinput="regIdCard"
+<input class="input input2" placeholder="居民身份证号" placeholder-class="plac"  type="number" name="idCard" bindinput="regIdCard"
 />
 </view>
 <view class="item">

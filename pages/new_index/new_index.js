@@ -1,6 +1,6 @@
 // pages/new_index/new_index.js
 const app = getApp()
-import{messageTip,genderHandle} from "../../utils/public/public";
+import{messageTip,genderHandle,getUserId} from "../../utils/public/public";
 Page({
 
   /**
@@ -9,7 +9,7 @@ Page({
   data: {
     //轮播图配置
     autoplay: true,
-    userId:"1314520",
+    userId:"",
     interval: 10000,
     duration: 1200,
     lunboData:[],
@@ -35,8 +35,10 @@ Page({
   },
   //创建二维码
   creat_qr_code(event){
+    console.log(event.target.id);
     wx.navigateTo({
-      url: `/pages/qrcode/qrcode?userId=${event.target.id}`,
+      url: `/pages/exam_list/exam_list?userId=${event.target.id}`,
+      //url: `/pages/qrcode/qrcode?userId=${event.target.id}`,
     })
   },
   /**
@@ -44,6 +46,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this; 
+    let ID = getUserId();
     var data = {
       "datas": [
         {
@@ -65,7 +68,8 @@ Page({
       ]
     }; 
     that.setData({
-      lunboData: data.datas
+      lunboData: data.datas,
+      userId:ID
     })
   },
 

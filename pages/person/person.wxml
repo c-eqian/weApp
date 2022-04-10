@@ -19,7 +19,7 @@
           <label>{{sex}}</label>
         </view>
         <view class="person-age">
-          <label class="iconfont icon-ziyuan48">年龄：</label>
+          <label class="iconfont icon-ziyuan48">生日：</label>
           <label>{{age}}</label>
         </view>
         <view class="person-org">

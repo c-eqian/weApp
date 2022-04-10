@@ -3,7 +3,7 @@
   <view class="my-container">
     <!--轮播图-->
   <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" 	indicator-active-color="#fff" 	indicator-color="gray">
-    <block wx:for-items="{{lunboData}}" wx:key="{{index}}">
+    <block wx:for-items="{{lunboData}}" wx:key="index">
       <swiper-item>
         <image src="{{item.imgurl}}" class="slide-image" />
       </swiper-item>
