@@ -1,5 +1,5 @@
 <view id="login-main">
-<view class="avatar-view"><image src="../../static/img/avatar.jpg" class="avatar">
+<view class="avatar-view"><image src="https://s1.ax1x.com/2022/04/16/LYmxwn.jpg" class="avatar">
 </image></view>
 <view class="nick">
   <label class="nickname">十三</label>

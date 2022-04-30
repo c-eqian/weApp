@@ -3,18 +3,27 @@
     "pages/login/login",
     "pages/person/person",
     "pages/register/register",
-    "pages/Physicaldetails/Physicaldetails",
-    "pages/classification/classification",
-    "pages/listItem/listItem",
-    "pages/list/list",
+    "pages/index/index",
     "pages/notice/notice",
-    "pages/details/details",
-    "pages/new_index/new_index",
-    "pages/qrcode/qrcode",
-    "pages/appointment/appointment",
-    "pages/apply-physical/apply-physical",
-    "pages/tijian_details/index",
-    "pages/exam_list/exam_list"
+    "pages/qrcode/qrcode"
+  ],
+  "subPackages":[
+    {
+      "root": "physical-detail",
+      "name": "详情",
+      "pages": [
+        "pages/apply-physical/apply-physical",
+        "pages/appointment/appointment",
+        "pages/classification/classification",
+        "pages/details/details",
+        "pages/exam_list/exam_list",
+        "pages/list/list",
+        "pages/listItem/listItem",
+        "pages/Physicaldetails/Physicaldetails",
+        "pages/tijian_details/index"
+      ]
+    }
+
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -32,7 +41,7 @@
     "backgroundColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/new_index/new_index",
+        "pagePath": "pages/index/index",
         "text": "首页"
       },
       {

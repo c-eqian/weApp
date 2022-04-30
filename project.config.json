@@ -39,7 +39,16 @@
     "useIsolateContext": true,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": [],
+    "packNpmRelationList": [
+      {
+        "packageJsonPath":"./physical-dettail/package.json",
+        "miniprogramNpmDistDir":"./physical-dettail/"
+      },
+      {
+        "packageJsonPath":"./package.json",
+        "miniprogramNpmDistDir":"./"
+      }
+    ],
     "minifyWXSS": true,
     "disableUseStrict": false,
     "minifyWXML": true,
@@ -47,7 +56,7 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.22.1",
+  "libVersion": "2.24.1",
   "projectname": "app",
   "cloudfunctionTemplateRoot": "",
   "watchOptions": {

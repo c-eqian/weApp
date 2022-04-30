@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-cell-group": "../../plugin/dist/cell-group/index",
+    "i-cell": "../../plugin/dist/cell/index",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

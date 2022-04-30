@@ -1,0 +1,17 @@
+<!--pages/details/details.wxml-->
+<view class="content">
+  <van-collapse value="{{ activeNames }}" bind:change="onChange" wx:for="{{dataList}}" data-item="{{item}}" bind:open="getItem">
+<view >
+  <van-collapse-item name="{{index}}">
+    <view slot="title">{{item.FeeItemName}}<van-icon name="question-o" /></view>
+    <view >
+    <view class="content-main content-class">
+    <view>11</view>
+    <view>11</view>
+    <view>11</view>
+    </view>
+    </view>
+  </van-collapse-item>
+</view>
+</van-collapse>
+</view>

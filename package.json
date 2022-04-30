@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vant/weapp": "^1.9.2",
+    "@vant/weapp": "^1.10.2",
     "cryptojs": "^2.5.3",
     "gm-crypt": "0.0.2",
     "miniprogram-sm-crypto": "^0.3.6",

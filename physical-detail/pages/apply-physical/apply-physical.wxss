@@ -1,0 +1,15 @@
+.checkBox-btn{
+  margin-top: 25rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit-btn{
+  margin-top: 20rpx;
+  width: 90%;
+  margin-left: 5%;
+}
+.value-class {
+  flex: none !important;
+}

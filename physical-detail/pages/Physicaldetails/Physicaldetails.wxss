@@ -1,0 +1,52 @@
+
+.caption-wrap{
+  margin-bottom: 150rpx;
+  height: 100%;
+}
+
+.caption-title{
+  font-weight: bold;
+  padding:20rpx 10rpx;
+}
+
+.collapse-item-title{
+  font-size: 12rpx;
+  color: #737373;
+  font-weight: bold;
+}
+
+.collapse-item-content{
+  font-size: 14rpx;
+  color: #444444;
+}
+.content-item{
+  display: flex;
+  justify-content: space-around;
+}
+.font-d{
+  text-align: center;
+  font-size: 1rem;
+}
+.font{
+  text-align: center;
+  font-size: 0.7rem;
+  width: 10em;
+}
+.font-2{
+  letter-spacing:0.5em; /*如果需要y个字两端对齐，则为(x-y)/(y-1),这里是（4-2）/(2-1)=2em */
+}
+.font-3{
+  letter-spacing:0.2em; /*如果需要y个字两端对齐，则为(x-y)/(y-1),这里是（4-3）/(3-1)=0.5em */
+}
+.fontCorlor{
+  color: #2d8cf0;
+}
+.content-one{
+  background-color: #fff;
+
+}
+.content-two{
+  background-color: #F5F7FA;
+}
+
+
