@@ -1,0 +1,68 @@
+/* pages/list/list.wxss */
+/* .item-main{
+}
+.item-main .item{
+  width: 98%;
+  padding: 3rpx;
+}
+.item-main .item .listItem-class{
+  border-bottom: 1rpx solid silver;
+  box-shadow: 0px 0px 10px #857e7e;
+}
+.list-class{
+  border-bottom: 1rpx solid silver;
+} */
+
+/* pages/suifan/index.wxss */
+@import "../../../styles/fonticon.wxss";
+.suifanList{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(235, 233, 233,0.5);
+  margin: -20rpx 0;
+  padding-top: 20rpx;
+}
+
+.item{
+  position: relative;
+  height: 180rpx;
+  margin: 20rpx 30rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+
+.time{
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  color: var(--themeColoer);
+  font-size: 26rpx;
+}
+.org_name{
+  position: absolute;
+  bottom: 10rpx;
+  left: 20rpx;
+  color: var(--themeColoer);
+  font-size: 26rpx;
+  color:var(--themeColoer);
+  background-color: rgba(22, 36, 231, 0.1);
+  padding: 5rpx 10rpx;
+  border-radius: 8rpx;
+}
+
+.more{
+  position: absolute;
+  right: 20rpx;
+  bottom: 10rpx;
+  color: var(--themeColoer);
+}
+
+.empty{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}

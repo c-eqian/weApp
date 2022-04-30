@@ -2,11 +2,12 @@
 
 <view class="person-main">
   <van-empty description="请先登录" wx:if="{{!isLogin}}">
+    <slot />
     <van-button round type="danger" class="bottom-button" bindtap="loginFuc">登录</van-button>
   </van-empty>
   <view class="person-content" wx:else>
     <view class="person-info">
-    <image class="avatar" wx:if="{{!avatarUrl}}" src="../../static/img/defaut-avatar.jpg"></image>
+    <image class="avatar" wx:if="{{!avatarUrl}}" src="https://s1.ax1x.com/2022/04/30/OpMmOH.jpg"></image>
       <image wx:else src="{{avatarUrl}}" class="avatar">
       </image>
       <view class="self-info">
@@ -39,34 +40,34 @@
       <view class="function-card">
         <view class="function-1">
           <view class="physical" bindtap="heightFuc">
-            <image src="../../static/fuc/height.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnnFx.png" class="physical-img">
             </image>
             <label>身高</label>
           </view>
           <view class="physical" bindtap="weightFuc">
-            <image src="../../static/fuc/weight-2.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnYTI.png" class="physical-img">
             </image>
             <label>体重</label>
           </view>
           <view class="physical" bindtap="temptFuc">
-            <image src="../../static/fuc/temp.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnGmd.png" class="physical-img">
             </image>
             <label>体温</label>
           </view>
         </view>
         <view class="function-2">
           <view class="physical" bindtap="urineFuc">
-            <image src="../../static/fuc/nj.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnuY6.png" class="physical-img">
             </image>
             <label>尿检</label>
           </view>
           <view class="physical" bindtap="EcgFuc">
-            <image src="../../static/fuc/ECG.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnZwR.png" class="physical-img">
             </image>
             <label>心电</label>
           </view>
           <view class="physical" bindtap="passFuc">
-            <image src="../../static/fuc/pass.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnllD.png" class="physical-img">
             </image>
             <label>超声</label>
           </view>
@@ -74,17 +75,17 @@
 
         <view class="function-3">
           <view class="physical">
-            <image src="../../static/fuc/not.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnKfK.png" class="physical-img">
             </image>
             <label>待定</label>
           </view>
           <view class="physical">
-            <image src="../../static/fuc/not.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnKfK.png" class="physical-img">
             </image>
             <label>待定</label>
           </view>
           <view class="physical" bindtap="allFuc">
-            <image src="../../static/fuc/all-2.png" class="physical-img">
+            <image src="https://s1.ax1x.com/2022/04/16/LYnVm9.png" class="physical-img">
             </image>
             <label>全部</label>
           </view>
@@ -100,7 +101,9 @@
   bind:select="onSelect"
   bind:cancel="onClose"
   cancel-text="取消"
-/>
+>
+<slot />
+</van-action-sheet>
   </view>
 <van-dialog id="van-dialog" />
 </view>

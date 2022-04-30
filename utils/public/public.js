@@ -1,6 +1,6 @@
-import dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
-import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
-const { $Message } = require('../../utils/plugin/dist/base/index');
+
+import Dialog from '@vant/weapp/dialog/dialog';
+const { $Message } = require('../plugin/dist/base/index');
 var util = require('../../utils/util.js');
 //正则校验手机号
 export function regExpPhone(phone){

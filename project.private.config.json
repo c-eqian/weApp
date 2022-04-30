@@ -133,14 +133,14 @@
           }
         },
         {
-          "name": "pages/new_index/new_index",
-          "pathName": "pages/new_index/new_index",
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null,
           "partialCompile": {
             "enabled": false,
             "pages": [
-              "pages/new_index/new_index"
+              "pages/index/index"
             ]
           }
         },
@@ -177,6 +177,30 @@
             "enabled": false,
             "pages": [
               "pages/apply-physical/apply-physical"
+            ]
+          }
+        },
+        {
+          "name": "physical-detail/pages/list/list",
+          "pathName": "physical-detail/pages/list/list",
+          "query": "res=undefined",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "physical-detail/pages/list/list"
+            ]
+          }
+        },
+        {
+          "name": "physical-detail/pages/tijian_details/index",
+          "pathName": "physical-detail/pages/tijian_details/index",
+          "query": "folup_no=1000021670091",
+          "scene": null,
+          "partialCompile": {
+            "enabled": false,
+            "pages": [
+              "physical-detail/pages/tijian_details/index"
             ]
           }
         }

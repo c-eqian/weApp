@@ -1,0 +1,14 @@
+<!--components/physical-list-item/physical-list-item.wxml-->
+<view class="card">
+<view class="card-top flex">
+<view>{{listItem.ItemName}}</view>
+<i></i>
+<view>{{listItem.Lis_Result}}</view>
+</view>
+<view class="card-bottom flex">
+<view class="font-color-gray">参考值：{{listItem.Lis_ReferenceRange}}
+</view>
+<view class="font-color-gray">单位：{{listItem.Lis_ResultUnit}}
+</view>
+</view>
+</view>

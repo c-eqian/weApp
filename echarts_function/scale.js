@@ -1,4 +1,4 @@
-import * as echarts from '../ec-canvas/echarts';
+import * as echarts from '../physical-detail/ec-canvas/echarts';
 
 // const app = getApp();
 function setOption(chart) {

@@ -23,7 +23,7 @@ Component({
     ],
     "list": [
       {
-        "pagePath": "/pages/new_index/new_index",
+        "pagePath": "/pages/index/index",
       },
       {
         "pagePath": "/pages/notice/notice",

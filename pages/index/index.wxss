@@ -1,0 +1,107 @@
+
+page{
+  background-color: #F2F4F6;
+}
+.my-grid .my-all-left image,.my-grid .my-other-right image{
+  width: 100%;
+  height: 500rpx;
+}
+.my-grid .my-all-left{
+  width: 100%;
+  min-height: 50rpx;
+}
+.my-grid .my-other-right{
+  width: calc(100% - 460rpx);
+  min-height: 500rpx;
+  background-color: aquamarine;
+}
+.my-grid{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 200rpx;
+  width: 100%;
+}
+
+.b-func{
+  position: absolute;
+  z-index: 99999;
+  top: 370rpx;
+  width: 96%;
+  margin-left: 2%;
+  height: 200rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-view-mid{
+  margin: 10rpx 0;
+  font: 1em sans-serif;
+  font-weight: 200;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.er2code{
+  background-color: rgb(7,193,96);
+  font-size: 0.8rem;
+  text-align: center;
+  color: #fff;
+}
+.mid-view,.left-view,.right-view{
+  box-shadow: 0px 0px 10px silver;/*阴影效果*/
+}
+.b-func .left-view,.b-func .right-view,.b-func .mid-view{
+  background-color: #F2F4F6;
+  border-radius: 10rpx;
+  border: 1px solid #F2F4F6;
+  width: 200rpx;
+  height: 190rpx;
+}
+.b-func .mid-view{
+  background: linear-gradient(to right, transparent, mistyrose);
+}
+.b-func .left-view{
+  margin-left: 10rpx;
+  background-image: linear-gradient(to right, #f9957f, #f2f5d0);
+}
+.b-func .right-view{
+  margin-right: 10rpx;
+  background-image: linear-gradient(to right, #9fa5d5, #e8f5c8);
+}
+.b-func .right-view .right-view-icon-text,.b-func .mid-view .mid-view-icon-text{
+  font-weight: 200;
+  margin: 20rpx 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+.b-func .right-view .right-view-icon-image,.b-func .mid-view .mid-view-icon-image{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.b-func .right-view .right-view-icon-image image,.b-func .mid-view .mid-view-icon-image image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.left-view-bottom{
+  margin-top: 10rpx;
+}
+.left-view-top{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.my-container{
+  width: 100%;
+  height: 380rpx;
+}
+/*轮播控件*/
+.my-container .home-swiper {
+  width: 100%;
+  height: 100%;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
