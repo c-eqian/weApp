@@ -1,6 +1,6 @@
 <!--pages/suifan_details/index.wxml-->
 <view class="body">
-  <van-tabs animated>
+  <van-tabs wx:if="show" animated sticky class="postion" bind:click="tabsClicked">
   <van-tab title="基本体检">
      <!--体重栏-->
      <view class="title">体重</view>
@@ -65,15 +65,21 @@
 
 
   <!-- 内科检查 -->
-  <van-tab title="内科检查">
-  <physical-list-item listItem = "{{test}}"></physical-list-item>
-  <physical-list-item listItem = "{{test}}"></physical-list-item>
-  <physical-list-item listItem = "{{test}}"></physical-list-item>
-  <physical-list-item listItem = "{{test}}"></physical-list-item>
-  <physical-list-item listItem = "{{test}}"></physical-list-item>
+  <van-tab title="生化检查">
+  <view wx:if="{{resultList.length>0}}">
+  <view wx:for="{{resultList}}" wx:key="index">
+  <view  class="title iconfont icon-tijianjieguo">{{item.FeeItemName}} </view>
+  <view class="card">
+  <view wx:for="{{item.list}}" wx:for-item="childItem" wx:for-index="childIndex" wx:key="childIndex" >
+    <physical-list-item listItem = "{{childItem}}"></physical-list-item>
+  </view>
+  </view>
+  </view>
+</view>
+
   </van-tab>
 
-  <van-tab title="生化检验">
+  <van-tab title="内科检查">
   
   <!--肝功能栏-->
   <view class="title">肝功能</view>
@@ -118,9 +124,6 @@
 
 
 </van-tab>
-
-
-
 
   <van-tab title="其他">
     

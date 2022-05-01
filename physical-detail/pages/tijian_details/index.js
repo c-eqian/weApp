@@ -2,6 +2,7 @@
 import { result } from '../../../utils/http/request'
 import { echart_init } from '../../../echarts_function/gauge'
 import { echart_init_them } from '../../../echarts_function/them'
+import {post,get} from "../../../utils/http/api.js"
 Page({
   /**
    * 页面的初始数据
@@ -13,6 +14,7 @@ Page({
       Lis_ResultUnit:"85",
       Lis_Result:"855"
     },
+    resultList:[],
     get_data: {},
     Personal_information: {},
     basic: {},
@@ -41,6 +43,31 @@ Page({
     vaccine: '',
     ec: {
       lazyLoad: true  //手动加载图表
+    }
+  },
+  tabsClicked:function(event){
+    var name = event.detail.name;
+    var that = this;
+    var url = '';
+    if(name==1){
+        url="/get-exam-result-list"
+        if(!that.resultList){
+          this.getResultByRid(url);
+        }
+    }
+    console.log(event)
+  },
+  getResultByRid(url=''){
+    if(url){
+      get(url,{
+        rid:"21101700009"
+      }).then(res=>{
+        if(res.status==200){
+          this.setData({
+            resultList:res.result
+          })
+        }
+      })
     }
   },
   onChange(event) {
@@ -379,7 +406,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    url="/get-exam-result-list"
+    this.getResultByRid(url);
   },
 
   /**

@@ -1,12 +1,16 @@
 /* components/physical-list-item/physical-list-item.wxss */
+@import "../style/iconfont.wxss";
 page{
   background-color: #e0e1e6;
+}
+.color-red{
+  color: red;
 }
 .card {
   margin-top: 20rpx;
   width: 90%;
   margin-left: 5%;
-  height: 150rpx;
+  height: 100rpx;
   background: rgb(255, 255, 255);
   border-radius: 0.4em;
   box-shadow: 0.3em 0.3em 0.7em #00000015;
