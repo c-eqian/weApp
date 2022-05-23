@@ -1,6 +1,6 @@
 // pages/index/index.js
 const app = getApp()
-import{messageTip,genderHandle,getUserId} from "../../utils/public/public";
+import{messageTip,genderHandle,getUserId,getUserInfo} from "../../utils/public/public";
 Page({
 
   /**
@@ -10,6 +10,8 @@ Page({
     //轮播图配置
     autoplay: true,
     userId:"",
+    firstName:"",
+    userInfo:{},
     interval: 10000,
     duration: 1200,
     lunboData:[],
@@ -23,14 +25,17 @@ Page({
   },
   //获取体检记录
   getPhysicalList(){
-    if(app.globalData.isLogin){
+    wx.navigateTo({
+      url: `../../physical-detail/pages/list/list?res`,
+    })
+   /* if(app.globalData.isLogin){
       wx.navigateTo({
         url: `../../physical-detail/pages/list/list?res`,
       })
     }
     else{
       messageTip("请先登录")
-    }
+    }*/
 
   },
   //创建二维码
@@ -47,6 +52,15 @@ Page({
   onLoad: function (options) {
     var that = this; 
     let ID = getUserId();
+    let userInfo = getUserInfo();
+    console.log(userInfo)
+    if(userInfo!==''){
+      that.setData({
+        userInfo:userInfo,
+        firstName:userInfo.name.slice(0,1)||''
+      })
+    }
+
     var data = {
       "datas": [
         {
@@ -84,6 +98,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.setNavigationBarColor({
+      backgroundColor: '#00B8B7',
+      frontColor: '#ffffff',
+    })
     if(typeof this.getTabBar === 'function' && this.getTabBar()){
       this.getTabBar().setData({
         current: 0  // 索引为0，是第一个tab

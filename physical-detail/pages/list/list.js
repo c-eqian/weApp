@@ -76,7 +76,27 @@ getItem:function(e){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    result({
+    const userId = getUserId();
+    if(userId){
+      get('/get_exam_list',{
+        userId:userId
+      }).then(res=>{
+        if(res.status==200){
+          let list = res.result
+        list.forEach((item)=>{
+          item.VisitingDate= item.VisitingDate.substring(0,10)
+        })
+        this.setData({
+          list
+        })
+        }
+        console.log(res)
+      })
+    }else{
+      messageTip('登录过期，请重新登录')
+    }
+
+   /* result({
       url: 'http://175.178.157.42:7090/v1/phy_exam_List',
       data:{
         idcard: "452528193812170017"
@@ -91,13 +111,13 @@ getItem:function(e){
         this.setData({
           list
         })
-    })
+    })*/
   },
   //跳转事件
   handitem(data){
-    let folup_no = data.target.dataset.folup_no || data.currentTarget.dataset.folup_no 
+    let rid = data.target.dataset.rid || data.currentTarget.dataset.rid 
     wx.navigateTo({
-      url: '/physical-detail/pages/tijian_details/index?folup_no='+ folup_no +'',
+      url: '/physical-detail/pages/tijian_details/index?rid='+ rid +'',
     })
   },
   /**
@@ -115,6 +135,10 @@ getItem:function(e){
    */
   onShow: function () {
   // this.allList() 
+  wx.setNavigationBarColor({
+    backgroundColor: '#00B8B7',
+    frontColor: '#ffffff',
+  })
   },
 
   /**

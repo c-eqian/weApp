@@ -8,6 +8,7 @@
 <view class="card-bottom flex">
 <view class="font-color-gray">参考值：{{listItem.Lis_ReferenceRange}}
 </view>
+<i class="color-red iconfont icon--xiangshangjiantou"></i>
 <view class="font-color-gray">单位：{{listItem.Lis_ResultUnit}}
 </view>
 </view>

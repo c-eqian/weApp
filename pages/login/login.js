@@ -53,7 +53,7 @@ if(e.detail.value.username&&e.detail.value.password){
         delta: 1,
       })*/
       wx.switchTab({
-        url: '/pages/person/person',
+        url: '/pages/index/index',
       })
     }
     else{

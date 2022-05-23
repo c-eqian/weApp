@@ -17,7 +17,7 @@
     "minified": true,
     "newFeature": false,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -41,12 +41,12 @@
     "packNpmManually": false,
     "packNpmRelationList": [
       {
-        "packageJsonPath":"./physical-dettail/package.json",
-        "miniprogramNpmDistDir":"./physical-dettail/"
+        "packageJsonPath": "./physical-dettail/package.json",
+        "miniprogramNpmDistDir": "./physical-dettail/"
       },
       {
-        "packageJsonPath":"./package.json",
-        "miniprogramNpmDistDir":"./"
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
       }
     ],
     "minifyWXSS": true,

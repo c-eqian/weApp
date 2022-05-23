@@ -14,7 +14,7 @@
 } */
 
 page{
-  background-color: #e0e1e6;
+  background-color: #ffffff;
 }
 /* pages/suifan/index.wxss */
 @import "../../../styles/fonticon.wxss";

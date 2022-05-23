@@ -1,10 +1,71 @@
 /* pages/suifan_details/index.wxss */
 @import "../../../styles/fonticon.wxss";
+@import "../../static//style/iconfont.wxss";
 .body{
   width: 100%;
   /* min-height: 100vh; */
   /* transform: translateX(); */
  height: 100%;
+}
+page{
+  background: linear-gradient(-45deg, #e7edf3, #e9f0ec, #f7fcf6, #f8f6f6);
+  animation: gradientBG 15s ease infinite;
+  background-size: 400% 400%;
+}
+@keyframes gradientBG{
+  0% {
+  background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.life_way{
+  margin: 20rpx;
+  border-radius: 15rpx;
+  background-color: white;
+  filter: drop-shadow(2px 2px 4px rgb(187, 186, 186));
+  padding-bottom: 40rpx;
+}
+
+.life_way .life_title{
+  display: flex;
+  background-color: #67C23A;
+  padding-top: 20rpx;
+  border-radius: 15rpx;
+}
+
+.life_way .life_title_itme{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+.life_way .life_way_item{
+  display: flex;
+  color: var(--themeColoer);
+}
+
+.life_way .life_way_item .name{
+  color: rgb(49, 48, 48);
+}
+
+.life_way .life_way_item_list{
+  flex: 1;
+  color: rgb(126, 124, 122);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0 20rpx 0;
+  font-size: 24rpx;
+  border-bottom: 1px dashed rgb(202, 198, 198);
 }
 .top_back{
   width: 100%;
@@ -65,7 +126,16 @@
   align-items: center;
   justify-content: center;
 }
-
+.card {
+  margin-top: 10rpx;
+  width: 94%;
+  margin-left: 2%;
+  background: rgb(255, 255, 255);
+  border-radius: 0.4em;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgb(250, 250, 250) 0.2em solid;
+ }
 .male_height, .female_height{
   writing-mode: vertical-lr;
   padding-right: 20rpx;

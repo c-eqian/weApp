@@ -84,6 +84,18 @@ export function getUserId(){
   }
   return userId
 }
+export function getUserInfo(){
+  try {
+    var value = wx.getStorageSync("userInfo")
+    if (value) {
+      return JSON.parse(value)
+      // Do something with return value
+    }
+  } catch (e) {
+    return -1
+    // Do something when catch error
+  }
+}
 /**
  * 异步设置缓存
  */

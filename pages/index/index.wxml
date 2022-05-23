@@ -14,9 +14,9 @@
 <view class="b-func">
 <view class="left-view">
 <view class="left-view-top">
-  <i-avatar i-class="index-avatar">梁</i-avatar>
+  <i-avatar i-class="index-avatar">{{firstName}}</i-avatar>
 </view>
-<view class="left-view-mid">不知道</view>
+<view class="left-view-mid">{{userInfo.name?userInfo.name:"-"}}</view>
 <view class="left-view-bottom">
 <view class="er2code iconfont icon-erweima" id="{{userId}}" bindtap="creat_qr_code">体检二维码</view>
 </view>

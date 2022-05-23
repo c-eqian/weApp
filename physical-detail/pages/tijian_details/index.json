@@ -3,6 +3,7 @@
     "navigationBarBackgroundColor": "#3985ff"
   },
   "usingComponents": {
+    "van-empty": "@vant/weapp/empty/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "physical-list-item":"../../../components/physical-list-item/physical-list-item",

@@ -7,7 +7,7 @@
   </van-empty>
   <view class="person-content" wx:else>
     <view class="person-info">
-    <image class="avatar" wx:if="{{!avatarUrl}}" src="https://s1.ax1x.com/2022/04/30/OpMmOH.jpg"></image>
+    <image class="avatar" wx:if="{{!avatarUrl}}" src="https://s1.ax1x.com/2022/04/30/OpMK0A.jpg"></image>
       <image wx:else src="{{avatarUrl}}" class="avatar">
       </image>
       <view class="self-info">
