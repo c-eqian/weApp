@@ -7,6 +7,66 @@
   /* transform: translateX(); */
  height: 100%;
 }
+page{
+  background: linear-gradient(-45deg, #e7edf3, #e9f0ec, #f7fcf6, #f8f6f6);
+  animation: gradientBG 15s ease infinite;
+  background-size: 400% 400%;
+}
+@keyframes gradientBG{
+  0% {
+  background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.life_way{
+  margin: 20rpx;
+  border-radius: 15rpx;
+  background-color: white;
+  filter: drop-shadow(2px 2px 4px rgb(187, 186, 186));
+  padding-bottom: 40rpx;
+}
+
+.life_way .life_title{
+  display: flex;
+  background-color: #67C23A;
+  padding-top: 20rpx;
+  border-radius: 15rpx;
+}
+
+.life_way .life_title_itme{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+.life_way .life_way_item{
+  display: flex;
+  color: var(--themeColoer);
+}
+
+.life_way .life_way_item .name{
+  color: rgb(49, 48, 48);
+}
+
+.life_way .life_way_item_list{
+  flex: 1;
+  color: rgb(126, 124, 122);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0 20rpx 0;
+  font-size: 24rpx;
+  border-bottom: 1px dashed rgb(202, 198, 198);
+}
 .top_back{
   width: 100%;
   background-color: var(--themeColoer);

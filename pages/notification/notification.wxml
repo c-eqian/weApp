@@ -1,2 +1,2 @@
 <!--pages/notification/notification.wxml-->
-<text>pages/notification/notification.wxml</text>
+<van-empty  description="无数据" />

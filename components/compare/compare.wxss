@@ -10,7 +10,7 @@
 
 .life_title{
   display: flex;
-  background-color: #1bafaf;
+  background-color: #67C23A;
   padding-top: 20rpx;
   border-radius: 15rpx;
 }

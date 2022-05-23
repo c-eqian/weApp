@@ -26,6 +26,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.setNavigationBarColor({
+      backgroundColor: '#00B8B7',
+      frontColor: '#ffffff',
+    })
     if(typeof this.getTabBar === 'function' && this.getTabBar()){
       this.getTabBar().setData({
         current: 1  // 索引为0，是第一个tab
