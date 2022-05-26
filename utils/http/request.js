@@ -1,5 +1,5 @@
 // 引入env中的url
-const { baseUrl } = require('./http.js').test; 
+const { baseUrl } = require('./http.js').dev; 
 //在这里添加我们的专业域名
 const subDomain = 'xxx';
 //定义请求次数

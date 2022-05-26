@@ -9,6 +9,7 @@ Page({
    */
   data: {
     msg:"暂无数据",
+    isHaveData:false,
     PID:"",
     list:[],
     page:1,
@@ -87,8 +88,15 @@ getItem:function(e){
           item.VisitingDate= item.VisitingDate.substring(0,10)
         })
         this.setData({
-          list
+          list:list,
+          isHaveData:true,
         })
+        }
+        else {
+          this.setData({
+            isHaveData:false,
+          })
+          messageTip(res.msg)
         }
         console.log(res)
       })
@@ -117,7 +125,7 @@ getItem:function(e){
   handitem(data){
     let rid = data.target.dataset.rid || data.currentTarget.dataset.rid 
     wx.navigateTo({
-      url: '/physical-detail/pages/tijian_details/index?rid='+ rid +'',
+      url: '/physical-detail/pages/tijian_details/tijian_details?rid='+ rid +'',
     })
   },
   /**

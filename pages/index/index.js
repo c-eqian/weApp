@@ -19,15 +19,27 @@ Page({
   },
   //体检预约
   apply_btn(){
-    wx.navigateTo({
-      url: '../../physical-detail/pages/apply-physical/apply-physical',
-    })
+    let userId = getUserId();
+    if(userId!==0){
+      wx.navigateTo({
+        url: '../../physical-detail/pages/apply-physical/apply-physical',
+      })
+    }else{
+      messageTip('登录过期，请重新登录')
+    }
+ 
   },
   //获取体检记录
   getPhysicalList(){
-    wx.navigateTo({
-      url: `../../physical-detail/pages/list/list?res`,
-    })
+    let userId = getUserId();
+    if(userId!==0){
+      wx.navigateTo({
+        url: `../../physical-detail/pages/list/list?res`,
+      })
+    }else{
+      messageTip('登录过期，请重新登录')
+    }
+ 
    /* if(app.globalData.isLogin){
       wx.navigateTo({
         url: `../../physical-detail/pages/list/list?res`,
@@ -40,26 +52,70 @@ Page({
   },
   //创建二维码
   creat_qr_code(event){
-    console.log(event.target.id);
-    wx.navigateTo({
-      url: `../../physical-detail/pages/exam_list/exam_list?userId=${event.target.id}`,
-      //url: `/pages/qrcode/qrcode?userId=${event.target.id}`,
-    })
+    let userId = getUserId();
+    if(userId!==0){
+      console.log(event.target.id);
+      wx.navigateTo({
+        url: `../../physical-detail/pages/exam_list/exam_list?userId=${event.target.id}`,
+        //url: `/pages/qrcode/qrcode?userId=${event.target.id}`,
+      })
+    }else{
+      messageTip('登录过期，请重新登录!')
+    }
+  
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    	// 打开调试
+	/*wx.setEnableDebug({
+		enableDebug: true
+	})
+*/
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+   
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    wx.setNavigationBarColor({
+      backgroundColor: '#00B8B7',
+      frontColor: '#ffffff',
+    })
+    if(typeof this.getTabBar === 'function' && this.getTabBar()){
+      this.getTabBar().setData({
+        current: 0  // 索引为0，是第一个tab
+      })
+    }
     var that = this; 
     let ID = getUserId();
     let userInfo = getUserInfo();
+    wx.getStorage({//获取本地缓存
+      key:"userInfo",
+      success:function(res){
+        console.log(res)
+        let info = JSON.parse(res.data)
+        that.setData({
+          userInfo:info,
+          firstName:info.name.slice(0,1)||''
+        })
+      },
+    })
     console.log(userInfo)
-    if(userInfo!==''){
+    /*if(userInfo!==''){
       that.setData({
         userInfo:userInfo,
         firstName:userInfo.name.slice(0,1)||''
       })
-    }
+    }*/
 
     var data = {
       "datas": [
@@ -85,28 +141,6 @@ Page({
       lunboData: data.datas,
       userId:ID
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-   
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    wx.setNavigationBarColor({
-      backgroundColor: '#00B8B7',
-      frontColor: '#ffffff',
-    })
-    if(typeof this.getTabBar === 'function' && this.getTabBar()){
-      this.getTabBar().setData({
-        current: 0  // 索引为0，是第一个tab
-      })
-    }
   },
 
   /**

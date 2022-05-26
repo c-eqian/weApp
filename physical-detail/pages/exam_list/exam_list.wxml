@@ -23,7 +23,7 @@
       <view class="doc_name">姓名：{{item.name}}</view>
       <view class="time"><van-tag type="{{item.status==1?'success':'primary'}}">{{item.status==0?'待体检':'已完成'}}</van-tag></view>
       <view class="org_name iconfont icon-position">{{item.creatTime}}</view>
-      <view wx:if="{{item.status==0}}" catchtap="handitem" data-folup_no="{{item.RequisitionId}}" class="more iconfont icon-youjiantou">查看二维码</view>
+      <view wx:if="{{item.status==0}}" catchtap="handitem" data-RequisitionId="{{item.RequisitionId}}" class="more iconfont icon-youjiantou">查看二维码</view>
   </view>
 </view>
 

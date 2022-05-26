@@ -106,7 +106,8 @@ getItem:function(e){
   },
   //跳转事件
   handitem(data){
-    let RequisitionId = data.target.dataset.RequisitionId || data.currentTarget.dataset.RequisitionId
+    console.log(data)
+    let RequisitionId = data.target.dataset.requisitionid || data.currentTarget.dataset.requisitionid
     wx.navigateTo({
       url: `/pages/qrcode/qrcode?RequisitionId=${RequisitionId}`,
     })

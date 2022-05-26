@@ -18,7 +18,7 @@
 <van-empty wx:else image="error" description="{{msg}}" /> -->
 
 <!--体检记录列表界面-->
-<view class="suifanList" wx:if="{list.length>0}">
+<view class="suifanList" wx:if="{{isHaveData}}">
   <view wx:for="{{list}}" wx:key="RequisitionId" class="item card" >
       <view class="doc_name">责任医师：{{item.Operator||''}}</view>
       <view class="time">体检时间：{{item.VisitingDate}}</view>
@@ -27,6 +27,6 @@
   </view>
 </view>
 
-<view class="empty" wx:else>
+<view class="empty" wx:else >
   <van-empty description="暂无数据" />
 </view>

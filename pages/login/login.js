@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    account:'11020024',
-    password:'1320',
+    account:'05086183',
+    password:'123',
     loginForm:{},
   },
   /*
@@ -25,7 +25,7 @@ Page({
  /**
   * 获取登录信息
   */
- login:function(e){
+login:  function(e){
 /*
 *获取登录信息
  */

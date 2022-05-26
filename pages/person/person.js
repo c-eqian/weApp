@@ -40,14 +40,9 @@ Page({
    * 身高
    */
   heightFuc:function(){
-    var self = this;
-    get(
-      "/basicDetails",
-      {
-        userId:this.data.userId
-      }).then(res=>{
-      })
-
+    wx.navigateTo({
+      url: `../../physical-detail/pages/list/list?res`,
+    })
   },
    /**
    * 体重
@@ -71,43 +66,32 @@ Page({
    * 体温
    */
  temptFuc:function(){
-   wx.getUserInfo({
-    lang: "zh_CN",
-     withCredentials: true,
-     success: (result) => {
-     },
-     fail: (res) => {
-     },
-   })
+  wx.navigateTo({
+    url: `../../physical-detail/pages/list/list?res`,
+  })
   },
   /**
    * 尿检
    */
 urineFuc:function(){
-    var that = this;
-    var url =  "/api/v2/zcurineTestItemList";
-    var data= {userId:this.data.userId }
-    get(
-     url,
-     data
-    ).then(res=>{
-      wx.navigateTo({
-        url: `/pages/listItem/listItem?res=${JSON.stringify(res)}`,
-      })
-    })
+  wx.navigateTo({
+    url: `../../physical-detail/pages/list/list?res`,
+  })
 },
   /**
    * 心电
    */
 EcgFuc:function(){
-    messageTip("心电测试")
+  wx.navigateTo({
+    url: `../../physical-detail/pages/list/list?res`,
+  })
   },
     /**
    * 超声
    */
 passFuc:function(){
   wx.navigateTo({
-    url: `/pages/classification/classification?Rid=${123456789}&&code=${2020}`,
+    url: `../../physical-detail/pages/list/list?res`,
   })
 },
     /**
@@ -115,7 +99,7 @@ passFuc:function(){
    */
  allFuc:function(){
   wx.navigateTo({
-    url: `/pages/list/list?res`,
+    url: `../../physical-detail/pages/list/list?res`,
   })
   },
   /**

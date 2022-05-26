@@ -15,7 +15,7 @@ Page({
     size.w = wx.getSystemInfoSync().windowWidth / 750 * 600
     size.h = size.w
     var that = this
-
+    console.log(this.data.RequisitionId)
     drawQrcode({
       width: size.w,
       height: size.h,
@@ -35,16 +35,16 @@ Page({
   searchFn(){
     this.ewmChange()
   },
-  /**
+  /**e
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     this.setData({
-      RequisitionId:options.userId?options.RequisitionId:""
+      RequisitionId:options.RequisitionId
     })
     this.ewmChange()
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

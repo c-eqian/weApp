@@ -20,7 +20,7 @@
         "pages/list/list",
         "pages/listItem/listItem",
         "pages/Physicaldetails/Physicaldetails",
-        "pages/tijian_details/index"
+        "pages/tijian_details/tijian_details"
       ]
     }
 
